@@ -24,12 +24,13 @@ class testOop:
 
     @staticmethod
     def modify(x):
-        print("modify method which is staticmethod is executed...!")
-        x = 10
-
+        print("modify method which is static method is executed...!")
+        x[2] = 10
+        x = [10, 10, 10, 10]
+        print(x)
 
 integer_variable = 5 # immutable like int, str, float, tuple ...
-list_variable = [1, 0, 5, 6] # mutable like list
+list_variable = [1, 0, 0, 6] # mutable like list
 test_oop = testOop()
 # ------------------------------------------------------------------------------------------
 
@@ -39,6 +40,7 @@ test_oop = testOop()
 
 test_oop.modify(list_variable)
 print(list_variable) # not changed in staticmethod.
-
-modify(list_variable)
-print(list_variable) # changed because the list in python is mutable.
+# list_variable = [1, 1]
+# print(list_variable)
+# modify(list_variable)
+# print(list_variable) # changed because the list in python is mutable.
